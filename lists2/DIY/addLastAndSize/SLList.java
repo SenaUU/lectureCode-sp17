@@ -26,12 +26,20 @@ public class SLList {
 
     /** Adds an item to the end of the list. */
     public void addLast(int x) {
-        /* Your Code Here! */
+        private IntNode finalitem(IntNode first) {
+            if (first.next != null) {
+                return finalitem(first.next);
+            } else {
+                first.next = IntNode(x, null);
     }
 
     /** Returns the number of items in the list using recursion. */
     public int size() {
-        /* Your Code Here! */
+        int num = 0;
+        while (first.next != null) {
+            first = first.next;
+            num++;
+        return num;
     }
 
 }
